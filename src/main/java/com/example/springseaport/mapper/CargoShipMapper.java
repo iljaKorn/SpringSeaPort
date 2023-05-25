@@ -12,8 +12,8 @@ import java.util.stream.Collectors;
 
 @Mapper(componentModel = "spring")
 public interface CargoShipMapper {
-    @Mapping(target = "scheduleId", expression = "java(getScheduleId(cargoShip.getSchedule().getId()))")
-    @Mapping(target = "cargoIdList", expression = "java(getCargoIds(cargoShip.getCargoList()))")
+    @Mapping(target = "scheduleId", expression = "java(getScheduleId(cargoShip.getSchedule()))")
+    @Mapping(target = "cargoIdList", expression = "java(getCargoShipIds(cargoShip.getCargoList()))")
     CargoShipDto toDto(CargoShip cargoShip);
     CargoShip toEntity(CargoShipDto dto);
 
