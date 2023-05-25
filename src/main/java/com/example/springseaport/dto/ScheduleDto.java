@@ -17,9 +17,6 @@ public class ScheduleDto {
     private Time time;
 
     private Integer cargoShipId;
-
-    private Integer cargoId;
-
     private String parkingPeriod;
 
 }

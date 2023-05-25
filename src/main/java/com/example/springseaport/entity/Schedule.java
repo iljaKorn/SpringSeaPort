@@ -27,6 +27,7 @@ public class Schedule {
     private Time time;
 
     @OneToOne(mappedBy = "schedule")
+    @JoinColumn(name = "cargoShip_id")
     private CargoShip cargoShip;
     @Column(name = "parking_period")
     private String parkingPeriod;
