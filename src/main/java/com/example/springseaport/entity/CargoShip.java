@@ -22,11 +22,10 @@ public class CargoShip {
     @Column(name = "id")
     private Integer id;
 
-    @NotNull
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "id",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "id", fetch = FetchType.LAZY)
     private List<Cargo> cargoList;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "schedule_id", referencedColumnName = "id")

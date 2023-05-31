@@ -22,12 +22,11 @@ public class Schedule {
     private Integer id;
 
     @Column(name = "date")
-    private Date date;
+    private String date;
     @Column(name = "time")
-    private Time time;
+    private String time;
 
-    @OneToOne(mappedBy = "schedule")
-    //@JoinColumn(name = "cargoShip_id")
+    @OneToOne(mappedBy = "schedule", fetch = FetchType.LAZY)
     private CargoShip cargoShip;
     @Column(name = "parking_period")
     private String parkingPeriod;

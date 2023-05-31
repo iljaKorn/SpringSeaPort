@@ -6,6 +6,7 @@ import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface CargoMapper {
+
     CargoDto toDto(Cargo cargo);
     Cargo toEntity(CargoDto dto);
 

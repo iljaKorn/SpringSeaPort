@@ -1,5 +1,7 @@
 package com.example.springseaport.dto;
 
+import com.example.springseaport.entity.CargoShip;
+import com.example.springseaport.entity.Schedule;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -12,11 +14,11 @@ public class ScheduleDto {
 
     private Integer id;
 
-    private Date date;
+    private String date;
 
-    private Time time;
+    private String time;
 
-    private Integer cargoShipId;
+    private CargoShip cargoShip;
     private String parkingPeriod;
 
 }

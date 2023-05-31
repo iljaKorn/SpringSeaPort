@@ -15,7 +15,7 @@ public class CargoShipDto {
 
     private String name;
 
-    private List<Integer> cargoIdList;
+    private List<Cargo> cargoList;
 
-    private Integer scheduleId;
+    private Schedule schedule;
 }

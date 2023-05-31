@@ -13,12 +13,7 @@ import java.util.stream.Collectors;
 
 @Mapper(componentModel = "spring")
 public interface ScheduleMapper {
-    @Mapping(target = "cargoShipId", expression = "java(getCargoShipId(schedule.getCargoShip()))")
     ScheduleDto toDto(Schedule schedule);
     Schedule toEntity(ScheduleDto dto);
-
-    default Integer getCargoShipId(CargoShip cargoShip) {
-        return cargoShip == null ? null : cargoShip.getId();
-    }
 
 }

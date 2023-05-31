@@ -8,6 +8,7 @@ import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface CraneMapper {
+
     CraneDto toDto(Crane crane);
     Crane toEntity(CraneDto dto);
 }
